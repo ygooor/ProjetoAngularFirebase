@@ -1,3 +1,4 @@
+
 import { Component, NgModule, ViewChild } from '@angular/core';
 import { AuthenticateService } from '../services/auth.service';
 import { CrudService } from '../services/crud.service';
@@ -34,7 +35,7 @@ export class HomePage {
 
   listarfuncionario(){
     this.isLoading = true;
-    fetch('http://localhost/empresa/funcionario/listar_funcionario.php')
+    fetch('http://localhost/ProjetoAngularFirebase/empresa/funcionario/listar_funcionario.php')
     .then(response => response.json())
     .then(response => {
       console.log(response);
@@ -48,7 +49,7 @@ export class HomePage {
     })
   }
 
-// ion-segmente evento de troca ///////////////////////////////////////////////////////////////////  
+
 
   trocar(event:any){
     console.log(event.detail.value)
@@ -56,10 +57,7 @@ export class HomePage {
   }
 
   submitForm() {
-    // Lógica para lidar com o envio do formulário
-    // Por exemplo, você pode acessar os valores dos campos do formulário assim:
-    // this.nomeDoCampo = this.formulario.get('nomeDoCampo').value;
-    // Em seguida, você pode enviar os dados para o seu backend ou fazer o que for necessário com eles.
+    
   }
 
 }
